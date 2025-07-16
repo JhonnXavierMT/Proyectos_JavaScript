@@ -1,0 +1,88 @@
+/* Fondo y tipografía */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f, #2b5876);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 5px;
+  min-height: 100vh;
+}
+
+/* Encabezados */
+h1 {
+  margin: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.05);
+}
+
+/* Botones */
+.button {
+  background: #4d4dff;
+  text-decoration: none;
+  width: 200px;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #6f6fff;
+  transform: scale(1.1);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Contenedor de resultados */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap; /* ✅ Para que se acomode en pantallas pequeñas */
+}
+
+.cuadrado {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  width: 120px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px; /* ✅ Espacio entre cajas cuando se apilen */
+}
+
+
+/* Resultado */
+#resultado {
+  font-size: 2rem;
+  margin-top: 15px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Títulos de resultado */
+h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+

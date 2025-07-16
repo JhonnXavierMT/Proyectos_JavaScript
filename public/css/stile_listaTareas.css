@@ -1,0 +1,125 @@
+/* Fondo y tipografía */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f, #2b5876);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Encabezado principal */
+h1 {
+  margin: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.05);
+}
+
+/* Formulario */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  width: 200px;
+  outline: none;
+}
+
+/* Botón añadir */
+.btnAdd {
+  background: #4d4dff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnAdd:hover {
+  background: #6f6fff;
+  transform: scale(1.1);
+}
+
+.btnAdd:active {
+  transform: scale(0.95);
+}
+
+/* Lista contenedor */
+.li-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 12px;
+  width: 80%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  background-color: rgb(6, 74, 169);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: rgb(12, 73, 197);
+  transform: scale(1.1);
+}
+
+.btn-eliminar:active {
+  transform: scale(0.95);
+}
+
+/* Mensaje vacío */
+.empty p {
+  font-size: 1.2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+  margin-top: 20px;
+}
