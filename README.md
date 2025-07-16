@@ -1,4 +1,4 @@
-# 📌 Nombre del Proyecto
+# 📌 Mini Proyectos JavaScript
 
 ![Captura del Menu](./public/img/mini_proyectosJavaScript.jpg)
 
@@ -11,8 +11,14 @@
 ### Contenido adicional:
 
 - ✅ Funcionalidades principales
-- 🚀 Cómo instalar
+    - Juego de puedra paepel y tijera
+    - Lista de tareas pendientes
+    - proximamente...
 - 🛠️ Tecnologías usadas
+    - JavaScript.
+    - Nodejs.
+    - Express.
+    - Motor de Plantillas EJS.
 - 🤝 Contribuciones
-
+    - Proximamente...
 ---
