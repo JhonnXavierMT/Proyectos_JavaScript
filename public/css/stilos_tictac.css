@@ -146,3 +146,41 @@ li {
     margin-top: 20px;
 }
 
+
+/* Responsividad */
+@media screen and (max-width: 600px) {
+    .container{
+        width: 300px;
+    }
+    .cuadrado {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    h1, #winner {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cuadrado {
+        width: 30%;
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    h1, #winner {
+        font-size: 1.4rem;
+    }
+
+    li {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

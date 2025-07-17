@@ -33,6 +33,9 @@ app.get("/listTareas", (req, res) => {
 app.get("/tictactoe", (req, res) => {
     res.render("tictactoe");
 });
+app.get("/ejercicios", (req, res) => {
+    res.render("ejercicios");
+});
 
 //-------------------------------------------------------
 
