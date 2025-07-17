@@ -30,6 +30,9 @@ app.get("/juegoDeTrivia", (req, res) => {
 app.get("/listTareas", (req, res) => {
     res.render("listTareas");
 });
+app.get("/tictactoe", (req, res) => {
+    res.render("tictactoe");
+});
 
 //-------------------------------------------------------
 
