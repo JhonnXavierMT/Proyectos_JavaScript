@@ -22,19 +22,27 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
     res.render("index");
 });
-
-app.get("/juegoDeTrivia", (req, res) => {
-    res.render("juegoDeTrivia");
-});
-
-app.get("/listTareas", (req, res) => {
-    res.render("listTareas");
-});
-app.get("/tictactoe", (req, res) => {
-    res.render("tictactoe");
-});
+//EJERCICIOS
 app.get("/ejercicios", (req, res) => {
     res.render("ejercicios");
+});
+//OFFICE
+app.get("/offices", (req, res) => {
+    res.render("office");
+});
+app.get("/offices/listTareas", (req, res) => {
+    res.render("listTareas");
+});
+//GAMES
+app.get("/games", (req, res) => {
+    res.render("games");
+});
+app.get("games/tictactoe", (req, res) => {
+    res.render("tictactoe");
+});
+
+app.get("games/juegoDeTrivia", (req, res) => {
+    res.render("juegoDeTrivia");
 });
 
 //-------------------------------------------------------
