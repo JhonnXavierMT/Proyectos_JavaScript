@@ -265,3 +265,108 @@ document.body.addEventListener("click", (e) => {
     console.log("Botón clickeado mediante delegación:", e.target.textContent);
   }
 });
+
+// ┌────────────────────────────────────┐
+// │ 1. Metodos para manipular cadenas  │
+// └────────────────────────────────────┘
+// .length → longitud de la cadena
+console.log(texto.length); 
+// → 10
+
+// .toUpperCase() → convierte a mayúsculas
+console.log(texto.toUpperCase()); 
+// → "HOLA MUNDO"
+
+// .toLowerCase() → convierte a minúsculas
+console.log(texto.toLowerCase()); 
+// → "hola mundo"
+
+// .charAt(posición) → obtiene el carácter en la posición
+console.log(texto.charAt(1)); 
+// → "o"
+
+// .at(-1) → obtiene el último carácter (moderno)
+console.log(texto.at(-1)); 
+// → "o"
+
+// .includes("subcadena") → verifica si contiene
+console.log(texto.includes("Mun")); 
+// → true
+
+// .startsWith("H") → empieza con...
+console.log(texto.startsWith("H")); 
+// → true
+
+// .endsWith("o") → termina con...
+console.log(texto.endsWith("o")); 
+// → true
+
+// .indexOf("M") → posición de la primera ocurrencia
+console.log(texto.indexOf("M")); 
+// → 5
+
+// .lastIndexOf("o") → última posición de ocurrencia
+console.log(texto.lastIndexOf("o")); 
+// → 9
+
+// .slice(inicio, fin) → extrae desde inicio hasta antes de fin
+console.log(texto.slice(0, 4)); 
+// → "Hola"
+
+// .substring(inicio, fin) → igual que slice pero sin negativos
+console.log(texto.substring(5, 10)); 
+// → "Mundo"
+
+// .substr(inicio, longitud) → extrae desde inicio cierta cantidad (deprecated)
+console.log(texto.substr(5, 3)); 
+// → "Mun"
+
+// .replace("original", "nuevo") → reemplaza la primera ocurrencia
+console.log(texto.replace("Hola", "Adiós")); 
+// → "Adiós Mundo"
+
+// .replaceAll("o", "x") → reemplaza todas las ocurrencias (moderno)
+console.log(texto.replaceAll("o", "x")); 
+// → "Hxlx Mundx"
+
+// .trim() → quita espacios al inicio y final
+console.log(frase.trim()); 
+// → "JavaScript es genial"
+
+// .trimStart() y .trimEnd()
+console.log(frase.trimStart()); 
+// → "JavaScript es genial "
+console.log(frase.trimEnd()); 
+// → " JavaScript es genial"
+
+// .repeat(n) → repite la cadena n veces
+console.log("JA ".repeat(3)); 
+// → "JA JA JA "
+
+// .split(",") → convierte cadena a array separando por coma
+console.log(lista.split(",")); 
+// → ["manzana", "pera", "banana"]
+
+// .concat(cadena2) → une cadenas
+console.log(texto.concat("!!!")); 
+// → "Hola Mundo!!!"
+
+// También puedes usar `+`
+console.log(texto + "!!!"); 
+// → "Hola Mundo!!!"
+
+// .padStart(longitud, "relleno") → rellena al inicio
+console.log("5".padStart(3, "0")); 
+// → "005"
+
+// .padEnd(longitud, "relleno") → rellena al final
+console.log("5".padEnd(3, "0")); 
+// → "500"
+
+// .match(/regex/) → busca con expresiones regulares
+console.log(texto.match(/o/g)); 
+// → ["o", "o"]
+
+// .replace con regex
+console.log(texto.replace(/o/g, "x")); 
+// → "Hxlx Mundx"

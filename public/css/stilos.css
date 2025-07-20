@@ -68,7 +68,7 @@ h1:hover {
 .button:active {
   transform: scale(0.95);
 }
-.jx-input[type="text"] {
+.jx-input{
   width: 100%;
   max-width: 400px;
   padding: 12px 20px;
@@ -84,11 +84,11 @@ h1:hover {
   transition: all 0.3s ease;
 }
 
-.jx-input[type="text"]::placeholder {
+.jx-input::placeholder {
   color: #aaa;
 }
 
-.jx-input[type="text"]:focus {
+.jx-input:focus {
   background-color: #1e1e1e;
   box-shadow: 0 0 0 3px #80bdff;
   border-color: #80bdff;

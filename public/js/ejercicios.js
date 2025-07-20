@@ -7,13 +7,22 @@ const contendorOne = document.querySelector(".contenedor_1");
 const contendorTwo = document.querySelector("#contenedor_2");
 const contendorThree = document.querySelector("#contenedor_3");
 const contenedorFour=document.querySelector("#contenedor_4");
+const contenedorFive=document.querySelector("#contenedor_5")
+const contenedorSix=document.querySelector("#contenedor_6")
+const contenedorSeven=document.querySelector("#contenedor_7")
 //_________________inputs_____________________
 const box1 = document.getElementById("box_One");
 const box2 = document.getElementById("box_Two");
-const box3 = document.getElementById("box_Three")
+const box3 = document.getElementById("box_Three");
+const box4 = document.getElementById("box_Four");
+const box5 = document.getElementById("box_Five");
+const box6 = document.getElementById("box_Six");
 //_________________botones_____________________
 const btn1 = document.getElementById("btn_primos");
 const btn2 = document.getElementById("btn_factoriales");
+const btn3=document.getElementById("btn_capicua");
+const btn4=document.getElementById("btn_contPalabra");
+const btn5=document.getElementById("btn_fivonaci");
 //-------------------------------------------------
 // ┌────────────────────────────────────┐
 // │ 2.        FUNCIONES                │
@@ -80,8 +89,70 @@ function ejercicio4() {
     });
 }
 //----------------Ejercicio 5----------------------
+function ejercicio5(){
+    btn3.addEventListener("click",()=>{
+        contenedorFive.textContent="";
+        const valor = Number(box4.value);
+        let cantidad = valor;
+        let nuevo = 0;
+        cont=0
+        while (cantidad>0) {
+            cont = cantidad % 10;
+            nuevo=(nuevo*10)+cont;
+            cantidad = ~~(cantidad/10);
+        }
+        const resultado = document.createElement("p");
+        if (nuevo == valor) {
+            resultado.textContent="🥳 "+valor+" Es un Numero capicua 😃";
+        } else {
+            resultado.textContent="😣 "+valor+" No es un Numero capicua 😪";
+        }
+        contenedorFive.appendChild(resultado)
+    });
+}
 //----------------Ejercicio 6----------------------
+function ejercicio6(){
+    btn4.addEventListener("click",()=>{
+        contenedorSix.textContent="";
+        const palabra = (box5.value).trim();
+        let cont = 0;
+        for (let i = 0; i < palabra.length; i++) {
+            //alert(palabra[i])
+            let element = palabra[i].toUpperCase();
+             if (
+                element == "A" || 
+                element == "E" || 
+                element == "I" || 
+                element == "O" || 
+                element == "U"){
+                cont++;
+             }
+        }
+        const nuevo = document.createElement("p");
+        nuevo.textContent="La cantidad de vocales es: "+cont+" 💁‍♂️";
+        contenedorSix.appendChild(nuevo); 
+    });
+}
+
 //----------------Ejercicio 7----------------------
+function ejercicio7(){
+    btn5.addEventListener("click",()=>{
+        contenedorSeven.textContent="";
+        const cantidad = box6.value;
+        let a = 1;
+        let b = 0;
+        let c = 0;
+        for (let i = 1; i <= cantidad; i++) {
+            c=a+b;
+            const nuevo = document.createElement("p");
+            nuevo.textContent=c+","
+            contenedorSeven.appendChild(nuevo);
+            a=b;
+            b=c
+        } 
+    });
+}
+
 //_______________NIVEL INERMEDIO_________________
 //8)✅ Ordenar array: Ordena un arreglo de números de forma ascendente y descendente.
 //9)✅ Eliminar duplicados de un array.
@@ -107,3 +178,6 @@ ejercicio1();
 ejercicio2();
 ejercicio3();
 ejercicio4();
+ejercicio5();
+ejercicio6();
+ejercicio7();
