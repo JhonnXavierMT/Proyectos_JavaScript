@@ -77,18 +77,61 @@
     <button class="button" id="Elminar_duplicados">Eliminar Duplicados</button>
     <div id="rpt2" class="contenedor"></div>
 
-    <button class="button">Buscar elemento</button>
+    <input type="text" placeholder="Ingrese elemento a buscar" id="box_buscar" class="jx-input">
+    <button class="button" id="btn_buscar_elemento">Buscar elemento</button>
     <div id="rpt3" class="contenedor"></div>
 
-    <button class="button">Suma de elementos</button>
+    <button class="button" id="sum_elements">Suma de elementos</button>
     <div id="rpt4" class="contenedor"></div>
 
-    <button class="button">Promedio de edades</button>
+    <button class="button" id="btn_promedio">Promedio de edades</button>
     <div id="rpt5" class="contenedor"></div>
-
-    <button class="button">aplanar Array</button>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <button class="button" id="btn_add_array">Agregar Array</button>
+      <button class="button" id="btn_aplanar_array">aplanar Array</button>
+    </div>
     <div id="rpt6" class="contenedor"></div>
   </div>
+  <h1>Ejercicios JavaScript</h1>
+  <h1>Avanzado</h1>
+  <div class="jx-centrear">
+    <h2>✅ Agregar nueva Tarea </h2>
+    <div style="display: flex;flex-wrap: wrap; justify-content: center; align-items: center;">
+      <input type="text" placeholder="Agregar uno nuevo" id="box_tareas" class="jx-input">
+      <button id="btn_agregar_tarea" class="button">Agregar</button>
+    </div>
+    <div id="contenedor_9" class="contenedor-vertical">
+    </div>
+  </div>
+  <h2> ⏲️ Cronometro con javascript</h2>
+  <div style="font-size: 2em; margin-bottom: 10px;" id="display">00:00:00</div>
+  <button id="start" class="button">Iniciar</button>
+  <button id="stop" class="button">Detener</button>
+  <button id="reset" class="button">Reiniciar</button>
+  <h2> ✅ Contador de clics</h2>
+  <button id="contar" class="button">contador</button>
+  <div id="contenedor_10">
+    <h1>0</h1>
+  </div>
+  <h2> 👮‍♂️ creador de contraseñas nivel de seguridad intermedio (3k años en ser rota)</h2>
+  <button id="password_generate" class="button">Generar Contraseña</button>
+  <div>
+    <h2 id="contenedor_11" class="neon">😄 aqui ira tu contraseña</h2>
+  </div>
+  <h2> 📳 Usamos un modal javascript</h2>
+  <button class="button" id="openModal">Abrir Modal</button>
+  <hr>
+  <div style="display: flex;justify-content: center;flex-direction: column; align-items: center;">
+    <h2> 📄 Validación de input solo letras</h2>
+    <form class="formulario">
+      <h2 class="color-gris">Formulario de ejemplo</h2>
+
+      <!-- Texto -->
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+    </form>
+  </div>
+
   <script src="js/ejercicios.js"></script>
 </body>
 

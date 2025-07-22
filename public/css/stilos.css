@@ -24,9 +24,20 @@ h1 {
   transition: transform 0.3s ease;
 }
 
+.neon {
+  margin: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease;
+}
+
 .contenedor {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -35,7 +46,41 @@ h1 {
   margin: 1rem;
 }
 
-.jx-centrear{
+.contenedor-tareas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  /* para el scroll siuuuu*/
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.contenedor-vertical {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+}
+
+.lista-tareas {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.jx-centrear {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +114,32 @@ h1:hover {
 .button:active {
   transform: scale(0.95);
 }
-.jx-input{
+
+.button-delet {
+  text-align: center;
+  background: #4d4dff;
+  text-decoration: none;
+  width: 20%;
+  border: none;
+  padding: 15px;
+  margin: 10px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-delet:hover {
+  background: #6f6fff;
+  transform: scale(1.1);
+}
+
+.button-delet:active {
+  transform: scale(0.95);
+}
+
+.jx-input {
   width: 80%;
   max-width: 400px;
   padding: 12px 20px;
@@ -93,6 +163,10 @@ h1:hover {
   background-color: #1e1e1e;
   box-shadow: 0 0 0 3px #80bdff;
   border-color: #80bdff;
+}
+
+.texto-tarea {
+  width: 80%;
 }
 
 /* Contenedor de resultados */
@@ -131,4 +205,118 @@ h1:hover {
 h2 {
   margin-top: 20px;
   font-size: 1.5rem;
+}
+.color-gris{
+  color: rgb(195, 195, 195);
+}
+/* Contenedor del formulario */
+.formulario {
+  
+  background: linear-gradient(135deg, #021051, #2d0a51);
+  /* Degradado lila-azul */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 500px;
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  color: rgb(168, 168, 168);
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario button {
+  color: rgb(166, 166, 166);
+  width: 70%;
+  background-color: transparent;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #aeaeae;
+  border-radius: 5px;
+}
+.formulario select{
+  width: 70%;
+  background-color: transparent;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #aeaeae;
+  border-radius: 5px;
+  color: black;
+  background-color: transparent;
+}
+
+.formulario input[type="checkbox"],
+.formulario input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.formulario .botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.formulario button {
+  background-color: #2d3f93;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #5568bc;
+}
+
+/*modal*/
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  color: #cecece;
+  /* background: linear-gradient(135deg, #364fbc, #562884); */
+  background: linear-gradient(135deg, #1e1e2f, #2b5876);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+.close {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
