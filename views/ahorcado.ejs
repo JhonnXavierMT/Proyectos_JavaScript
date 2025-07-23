@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ahorcado</title>
+  <link rel="stylesheet" href="css/stile_ahorcado.css">
+</head>
+
+<body>
+  <h1>juego del ahorcado</h1>
+  <div>
+    <h2 class="madera">--------------------------</h2>
+    <h2 class="madera">|</h2>
+  </div>
+
+  <div>
+    <p id="cabeza" class="ocultar">😐</p>
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <p id="b_izq">/</p>
+    <p id="cuerpo">|</p>
+    <p id="b_der">\</p>
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <p id="p_izq">/</p>
+    <p id="p_der">\</p>
+  </div>
+  <div><h2 id="preguntas"></h2></div>
+  <div id="palabra"> 
+    
+  </div>
+  <div id="mensaje">
+
+  </div>
+  <div class="botones"> <button class="button" id="recetear">Pregunta al Azar </button></div>
+</body>
+<script src="js/ahorcado.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</html>

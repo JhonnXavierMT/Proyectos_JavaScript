@@ -1,0 +1,119 @@
+/* Fondo y tipografía */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f, #2b5876);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 5px;
+  min-height: 100vh;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* Encabezados */
+h1 {
+  margin: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease;
+}
+
+p {
+  font-size: 2rem;
+  margin: 0px;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+}
+
+#palabra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 0px 20px;
+}
+
+input {
+  text-align: center;
+  background: transparent;
+  width: 30px;
+  color: white;
+  border: #2b5876;
+  margin: 0px 10px;
+  border-bottom: #fff solid 1px;
+  font-size: 1.5rem;
+}
+
+.neon {
+  margin: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease;
+}
+
+.mostrar {
+  display: block;
+}
+
+p {
+  display: none;
+}
+
+.madera {
+  margin: 0;
+  padding: 0px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+}
+
+.button {
+  background: #4d4dff;
+  text-decoration: none;
+  width: 200px;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #6f6fff;
+  transform: scale(1.1);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}

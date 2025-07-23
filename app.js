@@ -30,19 +30,22 @@ app.get("/ejercicios", (req, res) => {
 app.get("/offices", (req, res) => {
     res.render("office");
 });
-app.get("/offices/listTareas", (req, res) => {
+app.get("/listTareas", (req, res) => {
     res.render("listTareas");
 });
 //GAMES
 app.get("/games", (req, res) => {
     res.render("games");
 });
-app.get("games/tictactoe", (req, res) => {
+app.get("/tictactoe", (req, res) => {
     res.render("tictactoe");
 });
 
-app.get("games/juegoDeTrivia", (req, res) => {
+app.get("/juegoDeTrivia", (req, res) => {
     res.render("juegoDeTrivia");
+});
+app.get("/ahorcado", (req, res) => {
+    res.render("ahorcado");
 });
 
 //-------------------------------------------------------
