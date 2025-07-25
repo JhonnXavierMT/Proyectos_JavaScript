@@ -4,54 +4,28 @@
 const express = require("express");
 const path = require("path");
 const chalk = require("chalk");
+const router = require("./routes/routes"); 
+
 // Se ejecuta Express para crear un objeto app que funcionará como el servidor
 const app = express();
+
 //aplicamos los estilos y funcionalidades de javascript
 app.use("/css", express.static(path.join(__dirname, "public", "css")));
 app.use("/js", express.static(path.join(__dirname, "public", "js")));
+
 //----------para el motor de plantillas-----------------------
 app.set("view engine", "ejs"); // EJS setup
 app.set("views", path.join(__dirname, "views")); // Set the views directory
 
 
-// Middleware para parsear body si necesitas
+// Middleware para leer datos del body
 app.use(express.urlencoded({ extended: true }));
 
 //Configuración de enrutamiento--------------------
 
-app.get("/", (req, res) => {
-    res.render("index");
-});
-//EJERCICIOS
-app.get("/ejercicios", (req, res) => {
-    res.render("ejercicios");
-});
-//OFFICE
-app.get("/offices", (req, res) => {
-    res.render("office");
-});
-app.get("/listTareas", (req, res) => {
-    res.render("listTareas");
-});
-//GAMES
-app.get("/games", (req, res) => {
-    res.render("games");
-});
-app.get("/tictactoe", (req, res) => {
-    res.render("tictactoe");
-});
-
-app.get("/juegoDeTrivia", (req, res) => {
-    res.render("juegoDeTrivia");
-});
-app.get("/ahorcado", (req, res) => {
-    res.render("ahorcado");
-});
-
+// Usamos las rutas definidas en routes.js
+app.use("/", router); // 👈 Montamos las rutas
 //-------------------------------------------------------
-
-
-
 
 
 app.listen(3000, () => {
