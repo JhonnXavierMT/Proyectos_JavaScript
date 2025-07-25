@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f, #2b5876);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 5px;
+  min-height: 100vh;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* Encabezados */
+h1 {
+  margin: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease;
+}
+
+.neon {
+  margin: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease;
+}

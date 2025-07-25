@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crud de Officina</title>
+  <link rel="stylesheet" href="css/stile_crud_office.css">
+</head>
+
+<body>
+  <h1>Lista de Productos</h1>
+  <div >
+    <ul>
+      <% productos.forEach(producto => { %>
+      <li>
+        <strong><%= producto.nombre %></strong>
+      <li>
+      </li>
+       <%= producto.precio %> Bs
+      <li>
+      </li>
+       <%= producto.descripcion %>
+      <li>
+      </li>
+       <%= producto.cantidad %>
+      <li>
+      </li>
+       <%= producto.imagen %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+
+</html>
