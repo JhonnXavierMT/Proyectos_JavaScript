@@ -1,36 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crud de Officina</title>
-  <link rel="stylesheet" href="css/stile_crud_office.css">
-</head>
-
-<body>
-  <h1>Lista de Productos</h1>
-  <div >
-    <ul>
-      <% productos.forEach(producto => { %>
-      <li>
-        <strong><%= producto.nombre %></strong>
-      <li>
-      </li>
-       <%= producto.precio %> Bs
-      <li>
-      </li>
-       <%= producto.descripcion %>
-      <li>
-      </li>
-       <%= producto.cantidad %>
-      <li>
-      </li>
-       <%= producto.imagen %>
-      </li>
-      <% }) %>
-    </ul>
-  </div>
-</body>
-
-</html>
+<%- include("layout/header") %>
+<h1 class="neon">Lista de Productos</h1>
+<div class="area_btn">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        agregar
+      </button>
+      <a href="/crud_office/crear" type="button" class="btn btn-primary">
+        Adicionar
+      </a>
+      
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead class="columns">
+          <td>#</td>
+          <td>Nombre</td>
+          <td>Descripcion</td>
+          <td>Precio</td>
+          <td>Cantidad</td>
+          <td>imagen</td>
+          <td>Accion</td>
+        </thead>
+        <tbody>
+          <% productos.forEach(producto => { %>
+          <tr class="columns">
+            <td><%= producto.id %></td>
+            <td><%= producto.nombre %></td>
+            <td><%= producto.descripcion %></td>
+            <td><%= producto.precio %> Bs</td>
+            <td><%= producto.cantidad %></td>
+            <td>
+              <img class="img-thumbnail" width="100px" src="img/<%= producto.imagen %>" alt="<%= producto.imagen %>">
+             
+            </td>
+            <td>
+              <button class="btn btn-primary">Editar</button>
+              <button class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <%- include("modal/crear_producto") %>
+<%- include("layout/footer") %>

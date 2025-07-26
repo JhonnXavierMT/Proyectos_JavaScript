@@ -4,6 +4,7 @@
 const express = require("express");
 const path = require("path");
 const chalk = require("chalk");
+const bodyParser = require("body-parser");
 const router = require("./routes/routes"); 
 
 // Se ejecuta Express para crear un objeto app que funcionará como el servidor
@@ -12,6 +13,7 @@ const app = express();
 //aplicamos los estilos y funcionalidades de javascript
 app.use("/css", express.static(path.join(__dirname, "public", "css")));
 app.use("/js", express.static(path.join(__dirname, "public", "js")));
+app.use("/img", express.static(path.join(__dirname, "public", "img")));
 
 //----------para el motor de plantillas-----------------------
 app.set("view engine", "ejs"); // EJS setup
@@ -26,7 +28,9 @@ app.use(express.urlencoded({ extended: true }));
 // Usamos las rutas definidas en routes.js
 app.use("/", router); // 👈 Montamos las rutas
 //-------------------------------------------------------
-
+//configuramos para que reciba datos para el create
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 app.listen(3000, () => {
     console.log(
