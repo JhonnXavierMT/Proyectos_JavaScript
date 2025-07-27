@@ -29,5 +29,8 @@ router.get("/listTareas", (req, res) => {
 router.get("/crud_office", controllerProductOffice.index);
 router.post("/crud_office",cargar.single("imagen"), controllerProductOffice.Guardar);
 router.get("/crud_office/crear", controllerProductOffice.Crear);
+router.post("/crud_office/eliminar/:id", controllerProductOffice.Eliminar);
+router.get("/crud_office/editar/:id", controllerProductOffice.Editar);
+router.post("/crud_office/actualizar",cargar.single("imagen"), controllerProductOffice.Actualizar);
 
 module.exports = router;
