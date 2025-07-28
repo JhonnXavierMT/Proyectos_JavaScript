@@ -13,12 +13,16 @@
 - ✅ Funcionalidades principales
     - Juego de puedra paepel y tijera
     - Lista de tareas pendientes
-    - proximamente...
+    - El ahorcado.
+    - próximamente 
 - 🛠️ Tecnologías usadas
     - JavaScript.
     - Nodejs.
     - Express.
     - Motor de Plantillas EJS.
-- 🤝 Contribuciones
-    - Proximamente...
+    - SweatAlert2.
+    - boostrapt.
+- 🤝 Aprendisaje
+    - tutorial de como hacer un           CRUD.(develoteca).
+    - Se creo la estructura de            carpetas manualmente para           tener un mejor entendimiento        de la funcionalidad de cada         una 😁.
 ---
