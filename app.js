@@ -6,7 +6,7 @@ const path = require("path");
 const chalk = require("chalk");
 const bodyParser = require("body-parser");
 const router = require("./routes/routes"); 
-//impostamos inicio de session y flash para mensajes temporales
+//importamos inicio de session y flash para mensajes temporales
 const session = require('express-session');
 const flash = require('connect-flash');
 
