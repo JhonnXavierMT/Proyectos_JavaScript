@@ -1,16 +1,23 @@
 //llamamos a la conexion de la base de datos
+const { send } = require("process");
 const modeloProductoOffice = require("../models/productoModel")
 const borrar = require("fs");
+function control_de_error(req,err) {
+    if (err) {
+        req.flash('error', 'Hubo un error al Realizar la Accion del producto');
+    } else {
+        req.flash('success', 'Realizado correctamente');
+    }
+}
 module.exports = {
     //req => lo que solicita.
     //res => Como responde.
 
     index: function (req, res) {
         modeloProductoOffice.obtener(function (err, datos) {
-            if (err) return res.status(500).send("No se logro mostrar los datos");
+            if(err) return res.status(404).send("No se logro encontrar la pagina")
             res.render("crud_office", { productos: datos });
         });
-
     },
     Crear: function (req, res) {
         res.render("crud_product");
@@ -20,7 +27,8 @@ module.exports = {
         //console.log(req.body);
         //console.log(req.file.filename);
         modeloProductoOffice.insertar(req.body, req.file, function (err) {
-            res.redirect('crud_office');
+           control_de_error(req,err);
+            res.redirect('/crud_office');
         });
     },
     Eliminar: function (req, res) {
@@ -32,6 +40,7 @@ module.exports = {
                 borrar.unlinkSync(ubicacion_img);
             }
             modeloProductoOffice.borrarDato(req.params.id, function (err) {
+                control_de_error(req,err);
                 res.redirect("/crud_office");
             });
         });
@@ -41,6 +50,7 @@ module.exports = {
             //devuelve un array con un objeto:
             //  registro=> [{nombre:"mesa",etc}]
             //console.log(registro[0]);
+            if(err) return res.status(404).send("No se pudo encontrar la pagina");
             res.render("editar_product", { producto: registro[0] });
         });
     },
@@ -58,8 +68,9 @@ module.exports = {
             }
         }
         if (req.body.nombre) {
-            modeloProductoOffice.actualizar(req.body, function (err) { });
+            modeloProductoOffice.actualizar(req.body, function (err) {control_de_error(req,err); });
         }
+
         res.redirect('/crud_office')
     }
 };

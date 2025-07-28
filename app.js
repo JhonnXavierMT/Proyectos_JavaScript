@@ -6,6 +6,9 @@ const path = require("path");
 const chalk = require("chalk");
 const bodyParser = require("body-parser");
 const router = require("./routes/routes"); 
+//impostamos inicio de session y flash para mensajes temporales
+const session = require('express-session');
+const flash = require('connect-flash');
 
 // Se ejecuta Express para crear un objeto app que funcionará como el servidor
 const app = express();
@@ -14,6 +17,21 @@ const app = express();
 app.use("/css", express.static(path.join(__dirname, "public", "css")));
 app.use("/js", express.static(path.join(__dirname, "public", "js")));
 app.use("/img", express.static(path.join(__dirname, "public", "img")));
+
+//----------Usamos el inicio de session y flash
+app.use(session({
+  secret: 'CLave3434748584#&#&$/$(JhonnINformatico)=023',
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(flash());
+
+app.use((req, res, next) => {
+  res.locals.success = req.flash('success');
+  res.locals.error = req.flash('error');
+  next();
+});
 
 //----------para el motor de plantillas-----------------------
 app.set("view engine", "ejs"); // EJS setup
