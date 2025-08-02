@@ -2,21 +2,17 @@ const adivinar = [
     "Reloj",
     "Meses",
     "Cumpleaños",
-    "Febrero",
     "Sombra",
     "Calendario",
-    "Mañana",
-    "Febrero"
+    "Mañana"
 ];
 const preguntas = [
     "Tiene números pero no sabe contar, tiene agujas pero no sabe coser.",
     "Doce hermanitos viven juntos, cada uno con su propio nombre y duración.",
     "Solo una vez al año tú celebras ese día, y conmemoras la fecha en que llegaste a la vida.",
-    "Cuando uno nace, el otro muere. Son siete y viven solo un día.",
     "Me ves cada día, pero nunca soy igual. A veces soy largo, a veces corto, ¿quién soy?",
     "Te indica el día, el mes y el año, pero no habla ni camina.",
-    "Todos me esperan, pero cuando llego, ya no estoy.",
-    "Soy el menor entre doce, y cada cuatro años me crece el rabito."
+    "Todos me esperan, pero cuando llego, ya no estoy."
 ];
 
 const azar = Math.floor(Math.random()*adivinar.length);
