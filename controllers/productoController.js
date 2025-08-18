@@ -26,9 +26,6 @@ module.exports = {
         res.render("crud_product");
     },
     Guardar: function (req, res) {
-        //res.send(req.body);
-        //console.log(req.body);
-        //console.log(req.file.filename);
         modeloProductoOffice.insertar(req.body, req.file, function (err) {
             control_de_error(req, err);
             res.redirect('/crud_office');
